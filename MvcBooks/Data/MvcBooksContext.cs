@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using MvcBooks.Models;
+
+namespace MvcBooks.Data
+{
+    //Created when Scaffolding.
+    public class MvcBooksContext : DbContext
+    {
+        public MvcBooksContext (DbContextOptions<MvcBooksContext> options)
+            : base(options)
+        {
+        }
+
+        public DbSet<MvcBooks.Models.Books> Books { get; set; }
+    }
+}
